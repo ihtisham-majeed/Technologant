@@ -32,7 +32,7 @@ export default function Hero() {
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
               Crafting Digital <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600">
                 Masterpieces
               </span>
             </h1>
@@ -71,7 +71,7 @@ export default function Hero() {
         <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-medium">
           Scroll
         </span>
-        <div className="w-px h-14 sm:h-16 bg-gradient-to-b from-gray-500/50 to-transparent" />
+        <div className="w-px h-14 sm:h-16 bg-linear-to-b from-gray-500/50 to-transparent" />
       </motion.div>
     </section>
   );

@@ -203,7 +203,7 @@ export default function Contact() {
 
       <footer className="mt-14 -mb-10 text-center text-gray-500 text-sm relative z-10">
         {/* Decorative gradient line */}
-        <div className="w-60 h-1 mx-auto mb-3 bg-gradient-to-b from-gray-500/50 to-transparent rounded-full" />
+        <div className="w-60 h-1 mx-auto mb-3 bg-linear-to-b from-gray-500/50 to-transparent rounded-full" />
         &copy; {new Date().getFullYear()} Technologant. All rights reserved.
       </footer>
     </section>

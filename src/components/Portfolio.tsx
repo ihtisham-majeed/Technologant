@@ -3,16 +3,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { ExternalLink, Github, ArrowRight, Globe } from "lucide-react";
 
 const projects = [
   {
-    title: "Lumina E-Commerce",
-    category: "Full Stack / Next.js",
+    title: "Shake Hub",
+    category: "Full Stack / MERN",
     image:
-      "https://images.unsplash.com/photo-1481487484168-9b930d5b7d9f?q=80&w=2070&auto=format&fit=crop",
+      "https://zaheeralidev.vercel.app/_next/image?url=%2Fthumbnails%2Fshakehub.png&w=1920&q=75",
     description:
-      "A high-performance fashion store with real-time inventory and AI recommendations.",
+      "A high-performance full-stack milkshake ordering platform with a smooth UI built using",
+    link: "https://shakehub.netlify.app/",
   },
   {
     title: "Nexus Dashboard",
@@ -83,7 +84,7 @@ export default function Portfolio() {
               transition={{ delay: index * 0.1 }}
               className="group cursor-pointer"
             >
-              <div className="relative aspect-16/10 overflow-hidden rounded-2xl mb-4 bg-white/5 border border-white/5">
+              <div className="relative aspect-16/10 overflow-hidden rounded-lg mb-4 bg-white/5 border border-white/5">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10" />
                 <img
                   src={project.image}
@@ -98,10 +99,22 @@ export default function Portfolio() {
                 </div>
               </div>
               <div className="flex flex-col gap-3">
-                {/* Category on left */}
-                <span className="text-xs font-semibold tracking-wider text-gray-500 border border-white/10 px-4 py-2 rounded-full uppercase w-fit">
-                  {project.category}
-                </span>
+                {/* Category and View */}
+                <div className="flex items-center gap-4">
+                  <span className="text-xs font-semibold tracking-wider text-gray-500 border border-white/10 px-4 py-2 rounded-full uppercase w-fit">
+                    {project.category}
+                  </span>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-xs font-semibold tracking-wider text-gray-500 border border-white/10 px-4 py-2 rounded-full uppercase w-fit hover:text-white hover:border-white/30 transition"
+                  >
+                    <Globe size={13} />
+                    View
+                  </a>
+                </div>
 
                 {/* Title */}
                 <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
