@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-30 bg-white"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden  pt-20 bg-white"
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
@@ -60,7 +60,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+        className="absolute -bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
       >
         <span className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-medium">
           Scroll
