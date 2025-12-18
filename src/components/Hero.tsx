@@ -60,7 +60,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+        className="absolute bottom-0 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
       >
         <span className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-medium">
           Scroll
