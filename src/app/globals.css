@@ -6,10 +6,15 @@
 }
 
 :root {
-  --background: #050505;
-  --foreground: #ffffff;
+  --background: #ffffff;
+  --foreground: #000000;
+  --text-secondary: #4b5563;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --accent: #ec4899;
+  --border: #e5e7eb;
+  --card-bg: #f9fafb;
 }
-
 
 body {
   color: var(--foreground);
@@ -20,11 +25,30 @@ body {
 }
 
 html {
-  background: var(--background);
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background: var(--background);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-outfit), sans-serif;
+}
+
+/* Smooth scrolling */
+.smooth-scroll {
+  will-change: transform;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
 }

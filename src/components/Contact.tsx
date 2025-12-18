@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+ 
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Phone, ArrowRight, Check, ChevronDown } from "lucide-react";
+import { Mail, ArrowRight, Check, Linkedin, Instagram } from "lucide-react";
 import { useState } from "react";
 
 const services = [
@@ -37,13 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-22 bg-[#050505] relative overflow-hidden"
-    >
-      {/* Decorative Gradient */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-linear-to-t from-cyan-900/10 to-transparent pointer-events-none" />
-
+    <section id="contact" className="py-24 bg-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32">
           <motion.div
@@ -51,27 +45,27 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight text-black">
               Let&apos;s build <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-600">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
                 something great.
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-md leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 mb-12 max-w-md leading-relaxed">
               Ready to start your next project? We are here to help you turn
               your vision into reality.
             </p>
 
             <div className="space-y-8">
               <div className="flex items-center gap-6 group cursor-pointer">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-white/10 flex items-center justify-center text-gray-400 group-hover:text-white group-hover:border-white/30 transition-all bg-white/5">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 group-hover:bg-blue-100 transition-all">
                   <Mail size={20} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <p className="text-xs sm:text-sm text-gray-500 mb-1 uppercase tracking-wider">
                     Email Us
                   </p>
-                  <p className="text-lg sm:text-xl font-medium text-white group-hover:text-cyan-400 transition-colors font-outfit">
+                  <p className="text-lg sm:text-xl font-medium text-black group-hover:text-blue-600 transition-colors font-outfit">
                     technologant@gmail.com
                   </p>
                 </div>
@@ -92,13 +86,13 @@ export default function Contact() {
                 <input
                   type="text"
                   required
-                  className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-cyan-400 transition-colors placeholder-transparent peer"
+                  className="w-full bg-transparent border-b-2 border-gray-300 py-4 text-xl text-black focus:outline-none focus:border-blue-600 transition-colors placeholder-transparent peer"
                   placeholder="Your Name"
                   id="name"
                 />
                 <label
                   htmlFor="name"
-                  className="absolute left-0 top-4 text-gray-500 text-xl transition-all peer-focus:-top-6 peer-focus:text-sm peer-focus:text-cyan-400 peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-400 pointer-events-none"
+                  className="absolute left-0 top-4 text-gray-500 text-xl transition-all peer-focus:-top-6 peer-focus:text-sm peer-focus:text-blue-600 peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-700 pointer-events-none"
                 >
                   Your Name
                 </label>
@@ -108,13 +102,13 @@ export default function Contact() {
                 <input
                   type="email"
                   required
-                  className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-cyan-400 transition-colors placeholder-transparent peer"
+                  className="w-full bg-transparent border-b-2 border-gray-300 py-4 text-xl text-black focus:outline-none focus:border-blue-600 transition-colors placeholder-transparent peer"
                   placeholder="Email Address"
                   id="email"
                 />
                 <label
                   htmlFor="email"
-                  className="absolute left-0 top-4 text-gray-500 text-xl transition-all peer-focus:-top-6 peer-focus:text-sm peer-focus:text-cyan-400 peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-400 pointer-events-none"
+                  className="absolute left-0 top-4 text-gray-500 text-xl transition-all peer-focus:-top-6 peer-focus:text-sm peer-focus:text-blue-600 peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-700 pointer-events-none"
                 >
                   Email Address
                 </label>
@@ -122,7 +116,7 @@ export default function Contact() {
 
               {/* Service Selection */}
               <div className="space-y-4">
-                <label className="text-sm text-gray-500 uppercase tracking-wider block">
+                <label className="text-sm text-gray-700 uppercase tracking-wider block font-medium">
                   I&apos;m interested in...
                 </label>
                 <div className="flex flex-wrap gap-3">
@@ -131,10 +125,10 @@ export default function Contact() {
                       key={service}
                       type="button"
                       onClick={() => setSelectedService(service)}
-                      className={`px-4 py-2 rounded-full border text-sm transition-all duration-300 ${
+                      className={`px-4 py-2 rounded-full border-2 text-sm font-medium transition-all duration-300 ${
                         selectedService === service
-                          ? "bg-cyan-500 border-cyan-500 text-white"
-                          : "border-white/10 text-gray-400 hover:border-white/30 hover:text-white"
+                          ? "bg-blue-600 border-blue-600 text-white"
+                          : "border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600"
                       }`}
                     >
                       {service}
@@ -153,13 +147,13 @@ export default function Contact() {
                 <textarea
                   rows={3}
                   required
-                  className="w-full bg-transparent border-b border-white/20 py-4 text-xl text-white focus:outline-none focus:border-cyan-400 transition-colors placeholder-transparent peer resize-none"
+                  className="w-full bg-transparent border-b-2 border-gray-300 py-4 text-xl text-black focus:outline-none focus:border-blue-600 transition-colors placeholder-transparent peer resize-none"
                   placeholder="Project Details"
                   id="message"
                 />
                 <label
                   htmlFor="message"
-                  className="absolute left-0 top-4 text-gray-500 text-xl transition-all peer-focus:-top-6 peer-focus:text-sm peer-focus:text-cyan-400 peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-400 pointer-events-none"
+                  className="absolute left-0 top-4 text-gray-500 text-xl transition-all peer-focus:-top-6 peer-focus:text-sm peer-focus:text-blue-600 peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-700 pointer-events-none"
                 >
                   Project Details
                 </label>
@@ -168,10 +162,10 @@ export default function Contact() {
 
             <button
               disabled={formState !== "idle"}
-              className="group flex items-center gap-4 text-xl font-bold text-white hover:text-cyan-400 transition-colors mt-8 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group flex items-center gap-4 text-xl font-bold text-black hover:text-blue-600 transition-colors mt-8 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {formState === "submitting" ? "Sending..." : "Send Message"}
-              <span className="p-4 rounded-full bg-white/10 group-hover:bg-cyan-400 group-hover:text-black transition-all">
+              <span className="p-4 rounded-full bg-blue-600 text-white group-hover:bg-blue-700 group-hover:scale-110 transition-all">
                 <ArrowRight size={24} />
               </span>
             </button>
@@ -186,14 +180,14 @@ export default function Contact() {
             initial={{ opacity: 0, y: 50, x: "-50%" }}
             animate={{ opacity: 1, y: 0, x: "-50%" }}
             exit={{ opacity: 0, y: 50, x: "-50%" }}
-            className="fixed bottom-10 left-1/2 z-50 flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 shadow-2xl"
+            className="fixed bottom-10 left-1/2 z-50 flex items-center gap-4 px-6 py-4 rounded-2xl bg-white border border-gray-200 shadow-2xl"
           >
-            <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-black">
+            <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white">
               <Check size={20} strokeWidth={3} />
             </div>
             <div>
-              <h4 className="text-white font-bold">Message Sent!</h4>
-              <p className="text-gray-300 text-sm">
+              <h4 className="text-black font-bold">Message Sent!</h4>
+              <p className="text-gray-600 text-sm">
                 We&apos;ll get back to you shortly.
               </p>
             </div>
@@ -201,10 +195,46 @@ export default function Contact() {
         )}
       </AnimatePresence>
 
-      <footer className="mt-14 -mb-10 text-center text-gray-500 text-sm relative z-10">
+      <footer className="mt-20 text-center text-gray-600 relative z-10">
+        {/* Social Icons */}
+        <div className="flex items-center justify-center gap-6 mb-6">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-blue-600 transition-colors"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="w-6 h-6" />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-blue-600 transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-6 h-6" />
+          </a>
+          <a
+            href="https://tiktok.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-blue-600 transition-colors"
+            aria-label="TikTok"
+          >
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+            </svg>
+          </a>
+        </div>
+
         {/* Decorative gradient line */}
-        <div className="w-60 h-1 mx-auto mb-3 bg-linear-to-b from-gray-500/50 to-transparent rounded-full" />
-        &copy; {new Date().getFullYear()} Technologant. All rights reserved.
+        <div className="w-60 h-1 mx-auto mb-4 bg-linear-to-r from-transparent via-gray-300 to-transparent rounded-full" />
+
+        <p className="text-sm -mb-10">
+          &copy; {new Date().getFullYear()} Technologant. All rights reserved.
+        </p>
       </footer>
     </section>
   );
