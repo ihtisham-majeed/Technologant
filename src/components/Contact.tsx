@@ -199,7 +199,7 @@ export default function Contact() {
         {/* Social Icons */}
         <div className="flex items-center justify-center gap-6 mb-6">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/technologant"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -208,7 +208,7 @@ export default function Contact() {
             <Linkedin className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/technologant"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -217,7 +217,7 @@ export default function Contact() {
             <Instagram className="w-6 h-6" />
           </a>
           <a
-            href="https://tiktok.com"
+            href="https://www.tiktok.com/@technologant03"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-blue-600 transition-colors"
