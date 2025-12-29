@@ -9,11 +9,30 @@
   --background: #ffffff;
   --foreground: #000000;
   --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
   --primary: #2563eb;
   --primary-hover: #1d4ed8;
   --accent: #ec4899;
   --border: #e5e7eb;
   --card-bg: #f9fafb;
+  --section-bg: #f9fafb;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --accent: #f472b6;
+  --border: #27272a;
+  --card-bg: #18181b;
+  --section-bg: #0f0f0f;
+}
+
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -22,12 +41,25 @@ body {
   font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
   width: 100%;
+  
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   background: var(--background);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+  overflow-y: scroll;    
+}
+
+/* Ensure dark mode applies to html and body */
+html.dark {
+  background-color: #0a0a0a;
+}
+
+html.dark body {
+  background-color: #0a0a0a;
+  color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,6 +69,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Smooth scrolling */
 .smooth-scroll {
   will-change: transform;
+}
+
+/* GPU-accelerated animations */
+.gpu-accelerated {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Floating animation */
@@ -51,4 +90,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .float-animation {
   animation: float 6s ease-in-out infinite;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }

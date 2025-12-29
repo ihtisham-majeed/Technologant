@@ -51,7 +51,9 @@ export default function Navbar() {
     <nav
       className={clsx(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled ? "py-4 bg-gray-800 shadow-lg" : "py-4 bg-gray-800"
+        isScrolled
+          ? "py-4 bg-gray-800 dark:bg-gray-900 shadow-lg"
+          : "py-4 bg-gray-800 dark:bg-gray-900"
       )}
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-24 flex items-center justify-between">
@@ -75,7 +77,7 @@ export default function Navbar() {
           ))}
 
           {/* Social Icons Desktop */}
-          <div className="flex items-center gap-4 ml-4 pl-4 border-l border-gray-600">
+          <div className="flex items-center gap-4 ml-4 pl-4 border-l border-gray-600 dark:border-gray-700">
             {socialLinks.map((social) => {
               const Icon = social.icon;
               return (
@@ -84,7 +86,7 @@ export default function Navbar() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-blue-600 transition-colors"
+                  className="text-white dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   aria-label={social.name}
                 >
                   <Icon className="w-5 h-5" />
@@ -103,7 +105,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white p-2 z-50"
+          className="md:hidden text-white dark:text-gray-200 p-2 z-50"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X /> : <Menu />}
@@ -124,7 +126,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-3xl font-medium text-white font-outfit"
+                  className="text-3xl font-medium text-white dark:text-gray-200 font-outfit"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -152,7 +154,7 @@ export default function Navbar() {
 
               <Link
                 href="#contact"
-                className="w-full max-w-xs py-4 rounded-xl bg-blue-600 text-white font-bold text-center mt-8 hover:bg-blue-700 transition-all"
+                className="w-full max-w-xs py-4 rounded-xl bg-blue-600 dark:bg-blue-500 text-white font-bold text-center mt-8 hover:bg-blue-700 dark:hover:bg-blue-600 transition-all"
                 onClick={() => setIsOpen(false)}
               >
                 Start Project
