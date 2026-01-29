@@ -11,12 +11,12 @@ export default function About() {
     >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight text-black dark:text-white text-center">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
             About
           </span>
         </h2>
 
-        <span className="block h-0.5 w-28 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-12"></span>
+        <span className="block h-0.5 w-28 bg-linear-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-12"></span>
 
         <div
           className="

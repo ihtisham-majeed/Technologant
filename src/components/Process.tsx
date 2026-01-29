@@ -38,7 +38,7 @@ export default function Process() {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 tracking-tight text-black dark:text-white">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
               Process
             </span>
           </h2>
