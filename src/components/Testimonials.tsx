@@ -6,8 +6,8 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO",
+    name: "Sarah Aleem",
+    role: "Managing Director",
     company: "TechStart Inc",
     content:
       "Technologant transformed our digital presence completely. Their attention to detail and technical expertise is unmatched.",
@@ -16,7 +16,7 @@ const testimonials = [
   },
   {
     name: "Michael Chen",
-    role: "Founder",
+    role: "Senior Product Manager",
     company: "GrowthLabs",
     content:
       "Working with Technologant was a game-changer. They delivered beyond our expectations and on time.",

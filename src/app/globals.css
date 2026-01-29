@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+/* 
 @theme {
   --font-inter: var(--font-inter);
   --font-outfit: var(--font-outfit);
@@ -29,10 +29,13 @@
   --border: #27272a;
   --card-bg: #18181b;
   --section-bg: #0f0f0f;
-}
+} */
 
 * {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 body {
@@ -41,15 +44,14 @@ body {
   font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
   width: 100%;
-  
 }
 
 html {
   scroll-behavior: smooth;
   background: var(--background);
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-  overflow-y: scroll;    
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
 }
 
 /* Ensure dark mode applies to html and body */
@@ -62,7 +64,12 @@ html.dark body {
   color: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-outfit), sans-serif;
 }
 
@@ -80,7 +87,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Floating animation */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
